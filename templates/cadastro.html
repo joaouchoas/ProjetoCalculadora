@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Cadastro | Calculadora Uchoas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/bootstrap.min.css") }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/signin.css") }}">
+</head>
+
+  <body class="text-center">
+    <form class="form-signin" action="/cadastro" method="POST">
+      <img class="mb-4" src="{{ url_for('static', filename="img/logo.png") }}" alt="" width="350">
+
+  <label for="username" class="sr-only">Nome de Usuário</label>
+  <input type="text" name="username" id="input" class="form-control" placeholder="Nome de usuário">
+
+  <label for="input" class="sr-only">Nome</label>
+  <input type="text" id="email" name="email" class="form-control" placeholder="E-mail">
+
+  <label for="inputPassword" class="sr-only">Senha</label>
+  <input type="text" name="senha" id="inputPassword" class="form-control" placeholder="Senha">
+
+  
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
+  <a class="btn btn-lg btn-secondary btn-block" href="/">Retornar ao Login</button>
+</form>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+<script src="{{ url_for('static', filename="js/bootstrap.min.js") }}"></script>
+</body>
+</html>

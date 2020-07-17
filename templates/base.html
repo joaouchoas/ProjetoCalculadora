@@ -4,41 +4,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>{% block title %}Calculadora Uchoas{% endblock %}</title>
+    <title>Calculadora Uchoas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename="css/bootstrap.min.css") }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="{{ url_for('static', filename="css/style.css") }}">
 </head>
 
 <body>
-    <!-- INÍCIO NAVBAR-->
-{% block navbar %}
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="/index.html">Calculadora Uchoas</a>
-          </div>
-      
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="/">Início</a></li>
-              <li><a href="/historico">Histórico</a></li>
-              <li><a href="/login">Sair</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+
+  <nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2" href="{{ url_for('calculadora.calculo') }}" aria-label="Product">
+        Calculadora Uchoas
+      </a>
+      <a class="py-2 d-none d-md-inline-block" href="{{ url_for('calculadora.calculo') }}">Início</a>
+      <a class="py-2 d-none d-md-inline-block" href="{{ url_for('historico.historico') }}">Histórico</a>
+      <a class="py-2 d-none d-md-inline-block" href="{{ url_for('sessao.logout') }}">Sair</a>
+    </div>
+  </nav>
+  
+{% block content %}
 {% endblock %}
 
-
-{% block scripts %}
-    <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="{{ url_for('static', filename="js/bootstrap.min.js") }}"></script>
-{% endblock %}
 </body>
 
 </html>
