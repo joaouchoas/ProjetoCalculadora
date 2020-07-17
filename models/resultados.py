@@ -1,4 +1,4 @@
-from calculadora.app import db
+from ..app import db
 from . import Usuarios
 
 class Resultados(db.Model):
